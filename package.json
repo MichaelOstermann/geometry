@@ -1,0 +1,25 @@
+{
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "checks": "bun run eslint && bun run tsc && bun run vitest run --passWithNoTests",
+        "bundles": "bun run -F '*' bundle",
+        "bump": "bun run bumpp -r --no-push",
+        "release": "bun run checks && bun run bundles && bun run bump && bun run -F '*' release",
+        "docs": "vitepress dev docs --open",
+        "docs:build": "vitepress build docs"
+    },
+    "devDependencies": {
+        "@monstermann/barrels": "^0.1.1",
+        "@monstermann/eslint-config": "^0.4.0",
+        "@monstermann/vitepress-theme": "^0.2.0",
+        "@sindresorhus/tsconfig": "^7.0.0",
+        "bumpp": "^10.2.0",
+        "tsdown": "0.12.8",
+        "typescript": "^5.8.3",
+        "vitepress": "^1.6.3",
+        "vitepress-plugin-group-icons": "^1.6.1",
+        "vitest": "^3.2.4"
+    },
+    "workspaces": ["packages/*"]
+}

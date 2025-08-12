@@ -1,0 +1,22 @@
+import type { Rect } from "./types"
+import { dfdl } from "@monstermann/dfdl"
+import { clamp } from "./internals/clamp"
+import { merge } from "./merge"
+
+/**
+ * Removes a specified number of pixels from the rectangle's width at the right edge.
+ *
+ * @example
+ * ```ts
+ * // data-first
+ * Rect.dropRightPx({ left: 10, top: 20, width: 100, height: 80 }, 25);
+ * // { left: 10, top: 20, width: 75, height: 80 }
+ *
+ * // data-last
+ * pipe({ left: 10, top: 20, width: 100, height: 80 }, Rect.dropRightPx(25));
+ * // { left: 10, top: 20, width: 75, height: 80 }
+ * ```
+ */
+export const dropRightPx = dfdl((rect: Rect, amount: number): Rect => {
+    return merge(rect, { width: rect.width - clamp(amount, 0, rect.width) })
+}, 2)
