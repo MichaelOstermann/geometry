@@ -19,14 +19,14 @@
     },
     "packages/geometry": {
       "name": "@monstermann/geometry",
-      "version": "0.0.0",
+      "version": "0.0.1",
       "dependencies": {
         "@monstermann/dfdl": "^0.1.0",
       },
     },
     "packages/tree-shake-geometry": {
       "name": "@monstermann/tree-shake-geometry",
-      "version": "0.0.0",
+      "version": "0.0.1",
       "dependencies": {
         "@monstermann/tree-shake-import-namespaces": "^0.1.0",
       },
