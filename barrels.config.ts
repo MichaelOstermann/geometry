@@ -1,14 +1,8 @@
 import { defineConfig } from "@monstermann/barrels"
+import { namespace } from "@monstermann/barrels-namespace"
 
 export default defineConfig([
-    {
-        directories: "./packages/geometry/src/*",
-        files: "*.ts",
-        type: "namespace",
-    },
-    {
-        directories: "./packages/geometry/src",
-        files: "*/index.ts",
-        type: "flat",
-    },
+    namespace({
+        entries: "./packages/geometry/src/*",
+    }),
 ])
