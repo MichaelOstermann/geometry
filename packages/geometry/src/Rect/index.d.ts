@@ -54,7 +54,6 @@ import { placeAboveBy } from "./placeAboveBy.js";
 import { placeBelowBy } from "./placeBelowBy.js";
 import { placeLeftOfBy } from "./placeLeftOfBy.js";
 import { placeRightOfBy } from "./placeRightOfBy.js";
-import { Rect } from "./types.js";
 import { right } from "./right.js";
 import { scale } from "./scale.js";
 import { scaleX } from "./scaleX.js";
@@ -90,6 +89,13 @@ import { translateX } from "./translateX.js";
 import { translateY } from "./translateY.js";
 import { union } from "./union.js";
 import { width } from "./width.js";
+
+type Rect = {
+    readonly height: number
+    readonly left: number
+    readonly top: number
+    readonly width: number
+}
 
 declare namespace Rect {
     export {

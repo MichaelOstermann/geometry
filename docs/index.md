@@ -67,10 +67,6 @@ bun add @monstermann/geometry
 
 ## Tree-shaking
 
-This library exports [TypeScript namespaces](https://www.typescriptlang.org/docs/handbook/namespaces.html) instead of separate functions.
-
-If you are using an [unplugin](https://unplugin.unjs.io/) compatible bundler, you can use [unplugin-tree-shake-import-namespaces](https://michaelostermann.github.io/tree-shake-import-namespaces/) to tree-shake that namespace into individual imports during builds.
-
 ### Installation
 
 ::: code-group
