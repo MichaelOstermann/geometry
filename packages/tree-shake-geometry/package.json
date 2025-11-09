@@ -1,7 +1,7 @@
 {
     "name": "@monstermann/tree-shake-geometry",
     "type": "module",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Functional geometry utilities.",
     "author": "Michael Ostermann <michaelostermann@me.com>",
     "license": "MIT",
