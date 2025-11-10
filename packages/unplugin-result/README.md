@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>tree-shake-geometry</h1>
+<h1>unplugin-geometry</h1>
 
 **Functional geometry utilities.**
 

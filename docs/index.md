@@ -72,19 +72,19 @@ bun add @monstermann/geometry
 ::: code-group
 
 ```sh [npm]
-npm install -D @monstermann/tree-shake-geometry @monstermann/unplugin-tree-shake-import-namespaces
+npm install -D @monstermann/unplugin-geometry
 ```
 
 ```sh [pnpm]
-pnpm -D add @monstermann/tree-shake-geometry @monstermann/unplugin-tree-shake-import-namespaces
+pnpm -D add @monstermann/unplugin-geometry
 ```
 
 ```sh [yarn]
-yarn -D add @monstermann/tree-shake-geometry @monstermann/unplugin-tree-shake-import-namespaces
+yarn -D add @monstermann/unplugin-geometry
 ```
 
 ```sh [bun]
-bun -D add @monstermann/tree-shake-geometry @monstermann/unplugin-tree-shake-import-namespaces
+bun -D add @monstermann/unplugin-geometry
 ```
 
 :::
@@ -95,86 +95,56 @@ bun -D add @monstermann/tree-shake-geometry @monstermann/unplugin-tree-shake-imp
 
 ```ts [Vite]
 // vite.config.ts
-import treeshake from "@monstermann/unplugin-tree-shake-import-namespaces/vite";
-import treeshakeGeometry from "@monstermann/tree-shake-geometry";
+import geometry from "@monstermann/unplugin-geometry/vite";
 
 export default defineConfig({
-    plugins: [
-        treeshake({
-            resolve: [treeshakeGeometry],
-        }),
-    ],
+    plugins: [geometry()],
 });
 ```
 
 ```ts [Rollup]
 // rollup.config.js
-import treeshake from "@monstermann/unplugin-tree-shake-import-namespaces/rollup";
-import treeshakeGeometry from "@monstermann/tree-shake-geometry";
+import geometry from "@monstermann/unplugin-geometry/rollup";
 
 export default {
-    plugins: [
-        treeshake({
-            resolve: [treeshakeGeometry],
-        }),
-    ],
+    plugins: [geometry()],
 };
 ```
 
 ```ts [Rolldown]
 // rolldown.config.js
-import treeshake from "@monstermann/unplugin-tree-shake-import-namespaces/rolldown";
-import treeshakeGeometry from "@monstermann/tree-shake-geometry";
+import geometry from "@monstermann/unplugin-geometry/rolldown";
 
 export default {
-    plugins: [
-        treeshake({
-            resolve: [treeshakeGeometry],
-        }),
-    ],
+    plugins: [geometry()],
 };
 ```
 
 ```ts [Webpack]
 // webpack.config.js
-const treeshake = require("@monstermann/unplugin-tree-shake-import-namespaces/webpack");
-const treeshakeGeometry = require("@monstermann/tree-shake-geometry");
+const geometry = require("@monstermann/unplugin-geometry/webpack");
 
 module.exports = {
-    plugins: [
-        treeshake({
-            resolve: [treeshakeGeometry],
-        }),
-    ],
+    plugins: [geometry()],
 };
 ```
 
 ```ts [Rspack]
 // rspack.config.js
-const treeshake = require("@monstermann/unplugin-tree-shake-import-namespaces/rspack");
-const treeshakeGeometry = require("@monstermann/tree-shake-geometry");
+const geometry = require("@monstermann/unplugin-geometry/rspack");
 
 module.exports = {
-    plugins: [
-        treeshake({
-            resolve: [treeshakeGeometry],
-        }),
-    ],
+    plugins: [geometry()],
 };
 ```
 
 ```ts [ESBuild]
 // esbuild.config.js
 import { build } from "esbuild";
-import treeshake from "@monstermann/unplugin-tree-shake-import-namespaces/esbuild";
-import treeshakeGeometry from "@monstermann/tree-shake-geometry";
+import geometry from "@monstermann/unplugin-geometry/esbuild";
 
 build({
-    plugins: [
-        treeshake({
-            resolve: [treeshakeGeometry],
-        }),
-    ],
+    plugins: [geometry()],
 });
 ```
 
