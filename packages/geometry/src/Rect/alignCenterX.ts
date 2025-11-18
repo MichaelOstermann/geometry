@@ -1,4 +1,4 @@
-import type { Rect } from "./types"
+import type { Rect } from "."
 import { dfdl } from "@monstermann/dfdl"
 import { centerX } from "./centerX"
 import { setCenterX } from "./setCenterX"

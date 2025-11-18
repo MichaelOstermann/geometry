@@ -1,4 +1,4 @@
-import type { Rect } from "./types"
+import type { Rect } from "."
 
 /**
  * A constant representing the origin rectangle (positioned at 0,0 with zero width and height).

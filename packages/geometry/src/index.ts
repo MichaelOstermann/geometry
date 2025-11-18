@@ -1,1 +1,1 @@
-export * from "./Rect/index";
+export * from "./Rect/index"

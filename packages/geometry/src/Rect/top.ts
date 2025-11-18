@@ -1,4 +1,4 @@
-import type { Rect } from "./types"
+import type { Rect } from "."
 import { dfdl } from "@monstermann/dfdl"
 
 /**
