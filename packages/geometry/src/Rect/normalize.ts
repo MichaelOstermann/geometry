@@ -3,18 +3,26 @@ import { dfdl } from "@monstermann/dfdl"
 import { isEqual } from "./isEqual"
 
 /**
+ * # normalize
+ *
+ * ```ts
+ * function Rect.normalize(rect: Rect): Rect
+ * ```
+ *
  * Normalizes a rectangle by ensuring positive width and height, adjusting position as needed if dimensions were negative.
  *
- * @example
- * ```ts
- * // data-first
+ * ## Example
+ *
+ * ```ts [data-first]
  * Rect.normalize({ left: 50, top: 60, width: -30, height: -40 });
  * // { left: 20, top: 20, width: 30, height: 40 }
+ * ```
  *
- * // data-last
+ * ```ts [data-last]
  * pipe({ left: 50, top: 60, width: -30, height: -40 }, Rect.normalize());
  * // { left: 20, top: 20, width: 30, height: 40 }
  * ```
+ *
  */
 export const normalize = dfdl((rect: Rect): Rect => {
     const result = {

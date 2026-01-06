@@ -2,24 +2,32 @@ import type { Rect } from "."
 import { dfdl } from "@monstermann/dfdl"
 
 /**
+ * # contains
+ *
+ * ```ts
+ * function Rect.contains(a: Rect, b: Rect): boolean
+ * ```
+ *
  * Checks if rectangle `a` completely contains rectangle `b` within its boundaries.
  *
- * @example
- * ```ts
- * // data-first
+ * ## Example
+ *
+ * ```ts [data-first]
  * Rect.contains(
  *     { left: 0, top: 0, width: 100, height: 100 },
  *     { left: 10, top: 20, width: 50, height: 30 },
  * );
  * // true
+ * ```
  *
- * // data-last
+ * ```ts [data-last]
  * pipe(
  *     { left: 0, top: 0, width: 100, height: 100 },
  *     Rect.contains({ left: 10, top: 20, width: 50, height: 30 }),
  * );
  * // true
  * ```
+ *
  */
 export const contains = dfdl((a: Rect, b: Rect): boolean => {
     return a.left <= b.left

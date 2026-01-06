@@ -9,18 +9,26 @@ type RectEdges = {
 }
 
 /**
+ * # fromEdges
+ *
+ * ```ts
+ * function Rect.fromEdges(edges: { bottom: number, left: number, right: number, top: number }): Rect
+ * ```
+ *
  * Creates a rectangle from edge coordinates.
  *
- * @example
- * ```ts
- * // data-first
+ * ## Example
+ *
+ * ```ts [data-first]
  * Rect.fromEdges({ left: 10, top: 20, right: 110, bottom: 70 });
  * // { left: 10, top: 20, width: 100, height: 50 }
+ * ```
  *
- * // data-last
+ * ```ts [data-last]
  * pipe({ left: 10, top: 20, right: 110, bottom: 70 }, Rect.fromEdges());
  * // { left: 10, top: 20, width: 100, height: 50 }
  * ```
+ *
  */
 export const fromEdges = dfdl((edges: RectEdges): Rect => {
     const top = Math.min(edges.top, edges.bottom)
