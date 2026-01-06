@@ -1,7 +1,7 @@
 {
     "name": "@monstermann/geometry",
     "type": "module",
-    "version": "0.2.2",
+    "version": "0.3.0",
     "description": "Functional geometry utilities.",
     "author": "Michael Ostermann <michaelostermann@me.com>",
     "license": "MIT",
