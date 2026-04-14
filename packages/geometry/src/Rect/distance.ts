@@ -2,7 +2,6 @@ import type { Rect } from "."
 import { dfdl } from "@monstermann/dfdl"
 import { centerX } from "./centerX"
 import { centerY } from "./centerY"
-import { fromEdges } from "./fromEdges"
 import { intersects } from "./intersects"
 
 type Point = {
@@ -46,12 +45,12 @@ type LineIntersection = {
 export const distance = dfdl((a: Rect, b: Rect): number => {
     if (intersects(a, b)) return 0
 
-    const centerLine = fromEdges({
-        bottom: centerY(b),
+    const centerLine: Rect = {
+        height: centerY(b) - centerY(a),
         left: centerX(a),
-        right: centerX(b),
         top: centerY(a),
-    })
+        width: centerX(b) - centerX(a),
+    }
 
     const start = intersectRectWithLine(a, centerLine)!
     const end = intersectRectWithLine(b, centerLine)!

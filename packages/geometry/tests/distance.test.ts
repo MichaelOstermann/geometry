@@ -34,4 +34,12 @@ describe("distance", () => {
 
         expect(result).toBeCloseTo(106.07)
     })
+
+    it("calculates diagonal distance when a is upper-right of b", () => {
+        const a: Rect = { height: 25, left: 100, top: 0, width: 25 }
+        const b: Rect = { height: 25, left: 0, top: 100, width: 25 }
+        const result = distance(a, b)
+
+        expect(result).toBeCloseTo(106.07)
+    })
 })
