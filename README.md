@@ -1973,4 +1973,3 @@ Rect.width({ left: 10, top: 20, width: 100, height: 50 });
 pipe({ left: 10, top: 20, width: 100, height: 50 }, Rect.width());
 // 100
 ```
-
