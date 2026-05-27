@@ -820,13 +820,8 @@ Creates a rectangle representing the browser window's viewport dimensions.
 
 #### Example
 
-```ts [data-first]
+```ts
 Rect.fromWindow();
-// { left: 0, top: 0, width: 1920, height: 1080 }
-```
-
-```ts [data-last]
-pipe(Rect.fromWindow());
 // { left: 0, top: 0, width: 1920, height: 1080 }
 ```
 
@@ -1978,3 +1973,4 @@ Rect.width({ left: 10, top: 20, width: 100, height: 50 });
 pipe({ left: 10, top: 20, width: 100, height: 50 }, Rect.width());
 // 100
 ```
+

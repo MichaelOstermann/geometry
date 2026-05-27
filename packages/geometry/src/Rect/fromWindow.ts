@@ -1,5 +1,4 @@
 import type { Rect } from "."
-import { dfdl } from "@monstermann/dfdl"
 
 /**
  * # fromWindow
@@ -12,22 +11,17 @@ import { dfdl } from "@monstermann/dfdl"
  *
  * ## Example
  *
- * ```ts [data-first]
+ * ```ts
  * Rect.fromWindow();
  * // { left: 0, top: 0, width: 1920, height: 1080 }
  * ```
  *
- * ```ts [data-last]
- * pipe(Rect.fromWindow());
- * // { left: 0, top: 0, width: 1920, height: 1080 }
- * ```
- *
  */
-export const fromWindow = dfdl((): Rect => {
+export function fromWindow(): Rect {
     return {
         height: window.innerHeight,
         left: 0,
         top: 0,
         width: window.innerWidth,
     }
-}, 0)
+}
